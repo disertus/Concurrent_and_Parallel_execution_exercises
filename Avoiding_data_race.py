@@ -7,6 +7,7 @@ race' and continue to perform the task concurrently"""
 lock = threading.Lock()
 counter = 0
 
+
 def add_entities():
     # creating a shared piece of memory
     # disclaimer - I do not use global variables under any circumstances in real life projects :)
@@ -18,6 +19,7 @@ def add_entities():
         counter += 1
         print(counter)
     lock.release()
+
 
 if __name__ == '__main__':
     # the 'target' attribute should not contain () at the end

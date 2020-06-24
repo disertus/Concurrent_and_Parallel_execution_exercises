@@ -5,6 +5,7 @@ import time
 It also shows how to .start() a thread and .join() a thread to another one, so that the former waits till the 
 latter finishes performing"""
 
+
 def some_work():
     return [print(f'The child is playing {i}') for i in range(50)]
 
