@@ -8,7 +8,10 @@ lock = threading.Lock()
 counter = 0
 
 def add_entities():
+    # creating a shared piece of memory
+    # disclaimer - I do not use global variables under any circumstances in real life projects :)
     global counter
+
     # acquire/release construction isolates a piece of memory and prevents data race between threads
     lock.acquire()
     for i in range(10_000_000):

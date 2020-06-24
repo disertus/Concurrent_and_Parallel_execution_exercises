@@ -21,6 +21,7 @@ class ThreadOne(threading.Thread):
         print('The Child Thread is done.')
 
 
+# name == main construction serves to differentiate the Main Thread from the Child Threads
 if __name__ == '__main__':
     print('The Main Thread is instantiating its Child')
     child_thread = ThreadOne()
